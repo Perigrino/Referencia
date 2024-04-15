@@ -72,7 +72,7 @@ public class ReferralCodeController(IReferralCodeRepository referralCodeReposito
                 Message = "Referral Code created successfully.",
                 Data = mapToReferralCode.MapsToResponse()
             };
-            return CreatedAtAction(nameof(Get), new { id = mapToReferralCode.Id }, referralCodeResponse);
+            return CreatedAtAction(nameof(Get), new { id = mapToReferralCode.Id }, referralCodeResponse.Data);
         }
         
         var referralCodeMaxedResponse = new FinalResponse<object>
